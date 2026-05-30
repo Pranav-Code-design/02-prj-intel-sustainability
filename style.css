@@ -145,6 +145,8 @@ section > div:nth-child(odd)::after {
   right: unset;
 }
 
+
+
 /* Right-side cards */
 section > div:nth-child(even) {
   grid-column: unset;
