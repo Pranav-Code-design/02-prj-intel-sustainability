@@ -20,7 +20,7 @@ body {
 
 /* Header section styling for the hero content */
 header {
-  padding: 60px 20px 80px;
+  padding: 18px 20px 24px;
   background: linear-gradient(180deg, #0077d8 0%, #005ea6 100%);
   color: #ffffff;
 }
@@ -35,12 +35,12 @@ header > div {
 /* Logo styling with a fixed maximum width */
 header img {
   display: block;
-  margin: 0 auto 24px;
+  margin: 0 auto 14px;
 }
 
 .header-logo {
-  width: min(220px, 80%);
-  max-width: 220px;
+  width: min(100px, 45%);
+  max-width: 100px;
   height: auto;
 }
 
@@ -53,7 +53,7 @@ header img {
 /* Main page title styling */
 h1 {
   margin: 0;
-  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1.05;
@@ -65,7 +65,7 @@ header h1::after {
   display: block;
   width: 80px;
   height: 4px;
-  margin: 18px auto 0;
+  margin: 10px auto 0;
   border-radius: 999px;
   background-color: rgba(255, 255, 255, 0.85);
 }
@@ -73,10 +73,10 @@ header h1::after {
 /* Paragraph text styling under the header */
 header p {
   max-width: 720px;
-  margin: 26px auto 0;
+  margin: 10px auto 0;
   color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(1rem, 2.2vw, 1.15rem);
-  line-height: 1.9;
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  line-height: 1.4;
 }
 
 /* Timeline section holds all event cards */
@@ -84,19 +84,18 @@ section {
   position: relative;
   max-width: 100%;
   margin: 36px auto 24px;
-  padding: 0 20px;
+  padding: 24px 20px 40px;
   display: flex;
   overflow-x: auto;
   gap: 24px;
   scroll-behavior: smooth;
-  padding-bottom: 40px;
 }
 
 /* Horizontal timeline line across the top */
 section::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 24px;
   left: 0;
   right: 0;
   width: 100%;
@@ -127,7 +126,7 @@ section > div {
 section > div::after {
   content: "";
   position: absolute;
-  top: -12px;
+  top: -2px;
   left: 50%;
   transform: translateX(-50%);
   width: 18px;
@@ -150,8 +149,12 @@ section > div:nth-child(odd)::after {
 section > div:nth-child(even) {
   grid-column: unset;
 }
-section > div:nth-child(even)::after {
-  left: unset;
+
+section > div::after {
+  top: -2px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
 }
 
 /* Hover state for cards to make them feel interactive */
@@ -194,7 +197,7 @@ section > div:hover img {
 
 /* Paragraph text inside timeline cards */
 section p {
-  margin: 0;
+  margin: 0 auto 10px;
   color: var(--text-soft);
   font-size: 0.75rem;
   opacity: 0;
